@@ -3,6 +3,12 @@
 # To use this script cd into it's parent directory and run:
 # chmod +x update.sh  
 
+# Gatekeeper - Checks if the user is root. If not it exits the script.
+if [ "$(id -u)" -ne 0 ]
+    then echo "Please run as root"
+    exit 1
+fi
+
 echo ""
 echo "*** Performing Update ***"
 echo ""
