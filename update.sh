@@ -1,23 +1,26 @@
 #!/bin/bash
 
+# To use this script cd into it's parent directory and run:
+# chmod +x update.sh  
+
 echo ""
 echo "*** Performing Update ***"
 echo ""
 echo "Updating list of available packages..."
 echo ""
-sudo apt update
+apt update
 echo ""
 echo "Upgrading available packages (if any wewre found)..."
 echo ""
-sudo apt upgrade -y
+apt upgrade -y
 echo ""
 echo "Removing any unnecessary packages..."
 echo ""
-sudo apt autoremove
+apt autoremove
 echo ""
 echo "Cleaning the APT cache..."
 echo ""
-sudo apt autoclean
+apt autoclean
 echo ""
 echo "Update Complete!"
 echo ""
